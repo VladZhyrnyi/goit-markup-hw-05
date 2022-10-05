@@ -228,12 +228,14 @@ a {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  color: var(--white-color);
 }
 
 .address-list .address-list-item + .address-list-item {
   margin-top: 9px;
+}
+
+.footer-contact-link.white {
+  color: var(--white-color)
 }
 
 .footer-contact-link {
@@ -373,11 +375,13 @@ a {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: transform var(--time-time-func);
+  transition: transform var(--time-time-func),
+    opacity var(--time-time-func),
+    visibility var(--time-time-func);
 }
 
 .backdrop.is-hidden {
-  /* visibility: hidden; */
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -398,7 +402,7 @@ a {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.4);
+  transform: translate(-50%, -50%) scale(0.6);
 }
 
 .modal-close-btn {
